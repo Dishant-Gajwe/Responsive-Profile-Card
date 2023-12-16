@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color:   #ffd3b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 360px;
+    width: 100%;
+    background:  #ffaaa5; 
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 31px 17px 11px rgba(0, 0, 0, 0.4);
+    position: relative;
+
+}
+
+.profile-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 39%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background: #a8e6cf;
+
+}
+
+.image{
+    position: relative;
+    height: 150px;
+    width:150px;
+    border-radius: 50%;
+    background-color: #000000;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.p-2{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    transition: all 0.3s ease;
+}
+
+.p-2:hover{
+    transform: scale(1.05);
+    filter: saturate(1px);
+    
+}
+
+.profile-card .text{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px;
+    animation: textAnimation 5s ease infinite;
+}
+
+@keyframes textAnimation {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(-20px);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+.profile-card .icons{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+}
+
+.icons .link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    margin: 0 8px;
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.icons .link:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.profile-card .button{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button .button{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 24px;
+    margin: 0 10px;
+    padding: 8px 24px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button .button:hover{
+    background-color: #0e4bf1;
+}
+
+.profile-card .analytics{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.analytics .data{
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 0 20px;
+    border-right: 2px solid #0000005d;
+}
+
+.data i{
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.data:last-child{
+    border: none;
+
+}
