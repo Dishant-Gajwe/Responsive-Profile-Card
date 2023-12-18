@@ -1,1 +1,1 @@
-Resposive Profile Card Design through html and css
+Responsive Profile Card Design through html and css
